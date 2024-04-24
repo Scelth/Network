@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ICQ.ChatView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ICQ"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Grid Background="#c4ecae">
+        <Border Padding="10" 
+                VerticalAlignment="Top" 
+                HorizontalAlignment="Center">
+
+            <Label Content="Chat" 
+                       FontSize="20" 
+                       Foreground="#30663c" 
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <TextBlock x:Name="userTextBlock" 
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   FontSize="20" 
+                   Foreground="#30663c"
+                   Margin="12"/>
+
+        <Border BorderBrush="#00703C" 
+                BorderThickness="1" 
+                CornerRadius="5" 
+                Margin="10,45,20,120"
+                Background="White">
+            
+            <ScrollViewer Height="215">
+                <StackPanel Margin="10">
+                    <TextBox x:Name="chatTextBox" 
+                             FontSize="16"
+                             Margin="0,0,0,5"
+                             IsReadOnly="True"
+                             TextWrapping="Wrap"
+                             BorderThickness="0" 
+                             Background="Transparent"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Border VerticalAlignment="Bottom"
+                BorderBrush="#00703C" 
+                BorderThickness="1" 
+                CornerRadius="5"
+                Margin="12"
+                Background="White"
+                Width="650"
+                HorizontalAlignment="Left">
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="messageTextBox"
+                         Width="645"
+                         Height="75" 
+                         Margin="2"
+                         TextWrapping="Wrap"
+                         FontSize="15"
+                         BorderThickness="0"/>
+            </StackPanel>
+        </Border>
+
+        <Button Content="Send" 
+                Width="100" 
+                Height="75"
+                Margin="12, 12, 12, 15" 
+                Background="#f2eb4c" 
+                Foreground="#30663c" 
+                FontSize="20"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Click="SendButton_Click"/>
+    </Grid>
+</UserControl>

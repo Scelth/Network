@@ -1,0 +1,46 @@
+﻿<Window x:Class="ICQ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICQ"
+        mc:Ignorable="d"
+        Title="ICQ" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Icon="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Papirus-64-apps-icq.svg/1200px-Papirus-64-apps-icq.svg.png">
+
+    <Grid Background="#c4ecae">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" 
+                    VerticalAlignment="Bottom" 
+                    HorizontalAlignment="Center">
+
+            <Label Content="Enter your username" 
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Foreground="#30663c"/>
+
+            <TextBox x:Name="usernameTextBox" 
+                     Height="40"
+                     FontSize="20"/>
+        </StackPanel>
+
+        <Button Grid.Row="1"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                Content="Log in"
+                Width="100" 
+                Height="55"
+                Margin="12"
+                Background="#f2eb4c" 
+                Foreground="#30663c" 
+                FontSize="20"
+                Click="LogInButton_Click"/>
+
+        <ContentControl Grid.RowSpan="2" x:Name="ChatControl"/>
+    </Grid>
+</Window>
